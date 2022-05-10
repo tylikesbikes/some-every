@@ -7,9 +7,7 @@ Examples:
 */
 
 function hasOddNumber(arr) {
-    return arr.some(function(a) {
-       return a%2===1;
-    });
+    return arr.some((a) =>a%2===1);
 }
 
 /*
@@ -21,9 +19,7 @@ Examples:
 */
 
 function hasAZero(num) {
-    return num.toString().split('').some(function(a) {
-        return a==='0';
-    });
+    return num.toString().split('').some((a)=> a==='0');
 }
 
 /*
@@ -35,9 +31,7 @@ Examples:
 */
 
 function hasOnlyOddNumbers(arr) {
-    return arr.every(function(a) {
-        return a%2===1;
-    });
+    return arr.every((a) =>a%2===1);
 }
 
 /*
@@ -49,9 +43,7 @@ Examples:
 */
 
 function hasNoDuplicates(arr) {
-    return arr.every(function(val,i,theArray) {
-        return !theArray.splice(1).includes(val);
-    });
+    return arr.every((val,i,theArray) => !theArray.splice(1).includes(val));
 }
 
 /*
@@ -70,9 +62,7 @@ Examples:
 */
 
 function hasCertainKey(arr, key) {
-    return arr.every(function(obj) {
-        return key in obj;
-    });
+    return arr.every((obj) => key in obj);
 }
 /*
 Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
@@ -91,7 +81,5 @@ Examples:
 */
 
 function hasCertainValue(arr, key, searchValue) {
-    return arr.every(function(obj) {
-        return (key in obj) && (obj[key]===searchValue);
-    });
+    return arr.every((obj) => (key in obj) && (obj[key]===searchValue));
 }
